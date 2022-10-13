@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <title>leaflet-map-simple</title>
+    <title>VegGIS</title>
+    <link rel="shortcut icon" href="2329903.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
 
@@ -38,6 +39,26 @@
             font-size: 24px;
             z-index: 800;
         }
+
+        #uploadButton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            z-index: 400;
+        }
+
+        .uploadButtonContainer {
+            /* background-color: white; */
+            font-family: arial;
+            font-weight: bold;
+            width: 15%;
+            z-index: 400;
+            position: absolute;
+            margin: 0 auto;
+            top: 10px;
+            right: 0px;
+        }
     </style>
 </head>
 
@@ -45,13 +66,25 @@
 
     <!-- Display the map and title with HTML division tags  -->
     <div id="map-title">VegGIS</div>
-    <div id="map"></div>
+    <div id="map">
+        <!-- <div class="leaflet-top leaflet-right">
+            <form action="/action_page.php">
+                <input type="file" id="myFile" name="filename" onclick="">
+            </form>
+        </div> -->
+    </div>
+    <div class="uploadButtonContainer">
+        Last opp SHP-/GeoJSON-fil:
+        <form action="/action_page.php">
+            <input type="file" id="uploadButton" name="layerupload" accept=".zip, .geojson">
+        </form>
+    </div>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
-    <script src="catiline.min.js"></script>
+    <!-- <script src="catiline.min.js"></script>
     <script src="shp.js"></script>
-    <script src="leaflet.shpfile.js"></script>
+    <script src="leaflet.shpfile.js"></script> -->
 
     <!-- Create the interactive map content with JavaScript (.js) -->
     <script>
